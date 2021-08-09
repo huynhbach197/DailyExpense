@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using APIExpense.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -26,8 +27,8 @@ namespace APIExpense
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            //services.AddDbContext<AsriContext>(options =>
-            //    options.UseNpgsql(Configuration.GetConnectionString("AsriConnection"), b => b.MigrationsAssembly("Asri.Server")));
+            services.AddDbContext<DailyExpenseContext>(options =>
+                options.UseNpgsql(Configuration.GetConnectionString("DailyExpense")));
 
         }
 
