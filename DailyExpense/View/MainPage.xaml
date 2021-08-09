@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:icons="clr-namespace:FontAwesome"
+             x:Class="DailyExpense.MainPage">
+            
+    <StackLayout BackgroundColor="{AppThemeBinding Dark=#0F1538, Light=White}" HeightRequest="200">
+         <StackLayout BackgroundColor="{AppThemeBinding Dark=#0F1538, Light=#CDDCF6}" Margin="20,100,0,30">
+            <Label Text="Welcome back," TextColor="{AppThemeBinding Light=#3F5674, Dark=White}" HorizontalTextAlignment="Start" FontSize="24" Margin="0,40,0,0"/>
+             
+            <Label Text="Huynh Bach" TextColor="{AppThemeBinding Light=#3F5674, Dark=White}" HorizontalTextAlignment="Start" FontSize="30"/>
+
+        
+       
+         </StackLayout>
+    <StackLayout Orientation="Horizontal" HeightRequest="60">
+        <Frame BackgroundColor="#2196F3" CornerRadius="20" WidthRequest="170" Margin="20,0,20,0">
+            <Label Text="Spending this month" FontSize="12"/>
+        </Frame>
+       <Frame BackgroundColor="#2196F3" CornerRadius="20" WidthRequest="20" Margin="10,0,20,0">
+           <Button Text="{x:Static icons:FontAwesomeIcons.Plus}" FontSize="12" FontFamily="FAB" TextColor="White" Clicked="Button_Clicked"/>
+        
+       </Frame>
+    </StackLayout>
+    </StackLayout>
+   
+</ContentPage>
